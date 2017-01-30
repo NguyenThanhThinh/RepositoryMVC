@@ -40,7 +40,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoryService.cs" />
+    <Compile Include="GadgetService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Demo.Data\Demo.Data.csproj">
+      <Project>{728B5019-E206-444C-9D20-E41C14420DC9}</Project>
+      <Name>Demo.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Demo.Model\Demo.Model.csproj">
+      <Project>{6B98583E-10C5-4898-BDA9-96B8C0F8CB54}</Project>
+      <Name>Demo.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

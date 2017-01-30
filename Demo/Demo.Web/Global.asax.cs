@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Demo.Data;
+using Demo.Web.App_Start;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,10 +14,12 @@ namespace Demo.Web
     {
         protected void Application_Start()
         {
+            System.Data.Entity.Database.SetInitializer(new DemoSeedData());
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            Bootstrapper.Run();
         }
     }
 }
